@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: 'Crimson Text', serif;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  height: 9vh;
+  align-items: center;
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  letter-spacing: 2px;
+}
+li{
+  list-style: none;
+  margin-left: 3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.logo{
+  font-weight: bold;
+  cursor: default ;
+}
+.right ul{
+  display: flex;
+  justify-content: space-between;
+}
+.right li:last-child{
+ font-size: 1.4rem;
+ padding-top: 0.3125rem;
+  margin-right: 2rem;
+}
+.right li:first-child{
+  margin: auto;
+  margin-right: -2rem;
+}
+.menu{
+  display: none;
+  font-size: 2.2rem;
+}
+body{
+  background-color: rgb(255, 255, 255);
+}
+.side-wrapper{
+  position: absolute;
+  top: 14.5rem;
+  left:0.6rem;
+}
+
+.side{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);    
+  margin-bottom: 2rem;
+}
+.side h2{
+  font-weight: 100;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.521);
+  cursor: pointer;
+}
+.container{
+  width:100%;
+}
+.imgscontainer{
+  margin:auto;
+  width: 79%;
+  overflow: hidden;
+  display: flex;
+}
+
+
+
+.carousel-image {
+  width: 20.9rem;
+  padding: 1rem;
+}
+.btmGroup {
+  margin-top: -0.2rem;
+  margin-left: 9rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+button{
+  outline: none;
+}
+
+.numBtns button {
+  font-size: 1.2rem;
+  border: none;
+  padding: 0 0.5rem;
+  color: rgba(131, 131, 131, 0.575);
+  background: none;
+  cursor: pointer;
+}
+
+.nextBtn {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  background: white;
+  border: 1.3px solid rgba(131, 131, 131, 0.575);
+  color: rgb(131, 131, 131);
+  cursor: pointer;
+  margin-right: 9.7rem;
+}
+
+button:hover{
+  color: black;
+}
+
+.nextBtn:hover{
+  border: 1.3px solid rgb(24, 22, 22);
+}
+
+.numBtns button.current {
+  color: black;
+}
+.nextBtn ion-icon {
+  font-size: 1rem;
+  padding: 0.4rem;
+
+}
+
+
+/* cards */
+.text{
+  position: relative;
+  display: inline-block;
+}
+.card{
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0.9rem;
+  bottom:1.2rem;
+  padding: 1rem;
+  line-height: 1.7;
+  background-color: rgb(252, 252, 252);
+  width: 13rem;
+  cursor: pointer;
+}
+
+
+.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+  padding: 0;
+  animation: popup 0.7s;
+}
+
+
+  @keyframes popup {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.6); 
+  }
+  100% {
+     opacity: 1; 
+     transform: scale(1);
+     }
+  }
+
+
+.extra-text {
+  display:none;
+}
+
+
+.btn-close {
+  position: absolute;
+  top:0.3rem;
+  right:1rem;
+  width:3rem;
+  height:3rem;
+  display:none;
+  cursor: pointer;
+}
+
+
+/* Extra reveals */
+
+.expanded .btn-close {
+  display:block;
+}
+
+.expanded .extra-text {
+  display :block;
+}
+
+.expanded .hide{
+  display: none;
+}
+
+.content{
+  display: flex;
+  width: 100%;
+}
+ .content img{
+  width: 25rem;
+  margin-left: -5rem;
+}
+.content-text{
+ margin-left: 6rem;
+
+} 
+.content-text h2{
+  border-bottom: rgba(105, 103, 103, 0.199) 1.4px solid;
+  width: 28rem;
+  margin-left: 5rem;
+  line-height: 2;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.content-text h3{
+  padding-left: 16rem;
+  line-height: 4;
+  font-size: 1.3rem;
+}
+.content-text p{
+  font-size: 1.2rem;
+  width: 88%;
+
+}
+
+.content-text p:first-of-type:first-letter { 
+  font-weight: bold; 
+  float: left;
+  font-size: 3.9rem;
+  line-height: 1;
+  margin-right: 9px;
+
+}
+
+
+/* ipad  3 to 4 cards*/
+@media screen and (max-width: 1144px){
+
+  .container{
+    padding-left: 2.4rem;
+
+  }
+  .imgscontainer{
+    margin:auto;
+    display: inline;
+  }
+  .carousel-image{
+     max-width:15rem ;
+  }
+
+    .btmGroup{
+      display: none;
+    }
+
+    .right ul{
+      margin-right: 1rem;
+    }
+    ul{
+      margin-left: 1rem;
+    }
+
+    .side-wrapper{
+      margin-top: 21rem;
+    }
+    .card{
+      width: auto;
+      font-size: 0.5rem;
+   }
+
+
+ .content-text p{
+   font-size: 1.9rem;
+ } 
+ .content-text p:first-of-type:first-letter { 
+  font-size: 2.9rem;
+
+}
+
+ .content img{
+   height: 62rem;
+  }
+  .content-text{
+    margin-left: 3.4rem;
+       
+   } 
+}
+/* phones 2 cards */
+
+
+@media screen and (max-width:653px) and (min-width:200px){
+ 
+  .carousel-image{
+    max-width:15.3rem ;
+ }
+  nav li{
+    display: none;
+  }
+
+  .logo{
+    display: block;
+    font-size: 1.3rem;
+    padding-left: -0.1rem;
+
+  }
+  .menu{
+    display: block;
+    position: relative;
+    left: -2.4rem;
+    
+  }
+  .card{
+    width: auto;
+    font-size: 0.5rem;
+  
+  }
+
+
+  .side-wrapper{
+    display: none;
+  }
+
+  .content img{
+     display: none;
+
+  }
+  .content-text h2{
+    margin-left: 1rem;
+  }
+  .content-text h3{
+    margin-left: -4rem;
+  }
+
+}
